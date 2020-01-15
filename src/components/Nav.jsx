@@ -10,7 +10,7 @@ const Nav = (props) => (
       <th>Assigned To</th>
       <th>
         <label>Threat Level &nbsp;</label>
-        <select id="myList" onChange={(e) => props.filterHandler(e.target.value)}>
+        <select id="myList" onChange={(e) => props.filterHandler( e.target.value)}>
           <option value="None"></option>
           <option value="Low-Priority">Low-Priority</option>
           <option value="Important">Important</option>

@@ -1,13 +1,16 @@
 const express = require('express');
 const NewBug = require('./db/queries.js').NewBug;
+// const reqCors = require('fastify-cors')
+const cors = require('cors')
 const app = express();
 
-const bodyparser = require('body-parser');
 
+const bodyparser = require('body-parser');
+app.use(cors())
 app.use(bodyparser.json());
 
+
 app.post('/bug', (req,res,next) => {
-  console.log(req.body)
   var newBug = new NewBug(req.body)
   newBug.save()
   // .then((results) => res.send(results))
@@ -15,6 +18,7 @@ app.post('/bug', (req,res,next) => {
 })
 
 app.get('/bug', (req, res, next) => {
+  // res.setHeader('Access-Control-Allow-Origin', '*');
   NewBug.find()
   .then((results) => res.send(results))
 })
