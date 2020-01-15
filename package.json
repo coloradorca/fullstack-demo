@@ -7,21 +7,6 @@
       "@babel/preset-react"
     ]
   },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": "airbnb-base",
-    "plugins": [
-      "react"
-    ],
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "rules": {   
-      "react/jsx-uses-react": "error",   
-      "react/jsx-uses-vars": "error" 
-    }
-  },
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -39,10 +24,6 @@
     "babel-loader": "^8.0.6",
     "cors": "^2.8.5",
     "css-loader": "^3.4.1",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-react": "^7.17.0",
     "node-sass": "^4.13.0",
     "nodemon": "^2.0.2",
     "react-hot-loader": "^4.12.10",
