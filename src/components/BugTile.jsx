@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const BugTile = (props) => (
+const BugTile = props => (
   <tbody>
     <tr className="bugTile">
       <td>{props.bugName}</td>
